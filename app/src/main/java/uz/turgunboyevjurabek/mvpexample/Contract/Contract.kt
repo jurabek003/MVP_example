@@ -6,9 +6,10 @@ interface Contract {
         fun showProgress()
         fun hideProgress()
         fun setString(string: String?)
+
     }
 
-  public  interface Model{
+    interface Model{
         interface OnFinishedListener{
             fun onFinished(string: String?)
         }
@@ -17,7 +18,13 @@ interface Contract {
 
     interface Presenter{
         fun onButtonClick()
+        fun onStarted()
+        fun onCreated()
+        fun onResume()
+        fun onPause()
+        fun onStop()
         fun onDestroy()
+
     }
 
 }
